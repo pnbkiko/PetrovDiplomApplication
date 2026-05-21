@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.kurs.petrovkurs.controller.LoginController"
+            style="-fx-background-color: linear-gradient(to bottom right, #2c3e50, #34495e);">
+
+    <center>
+        <VBox alignment="CENTER" spacing="30" style="-fx-padding: 50;">
+
+            <!-- Заголовок -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="⚙️" style="-fx-font-size: 64; -fx-text-fill: white;"/>
+                <Label text="ТО Станков" style="-fx-font-size: 32; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Label text="Система управления техническим обслуживанием"
+                       style="-fx-font-size: 14; -fx-text-fill: #bdc3c7;"/>
+            </VBox>
+
+            <!-- Форма входа -->
+            <VBox spacing="20" maxWidth="400" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30;">
+
+                <Label text="Вход в систему" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+                <!-- Поле логин -->
+                <VBox spacing="5">
+                    <Label text="Логин" style="-fx-font-size: 14; -fx-text-fill: #7f8c8d;"/>
+                    <TextField fx:id="usernameField" promptText="Введите логин"
+                               style="-fx-padding: 12; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #dee2e6;"/>
+                </VBox>
+
+                <!-- Поле пароль -->
+                <VBox spacing="5">
+                    <Label text="Пароль" style="-fx-font-size: 14; -fx-text-fill: #7f8c8d;"/>
+                    <PasswordField fx:id="passwordField" promptText="Введите пароль"
+                                   style="-fx-padding: 12; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #dee2e6;"/>
+                </VBox>
+
+                <!-- Сообщение об ошибке -->
+                <Label fx:id="errorLabel" text="" style="-fx-text-fill: #e74c3c; -fx-font-size: 12;"/>
+
+                <!-- Кнопки -->
+                <HBox spacing="15" alignment="CENTER">
+                    <Button text="Войти" onAction="#handleLogin"
+                            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 12 35; -fx-background-radius: 5; -fx-cursor: hand;"/>
+                    <Button text="Справка" onAction="#handleHelp"
+                            style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 12 35; -fx-background-radius: 5; -fx-cursor: hand;"/>
+                </HBox>
+
+                <!-- Информация о тестовых аккаунтах -->
+
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
